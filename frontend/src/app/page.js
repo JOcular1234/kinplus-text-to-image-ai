@@ -335,6 +335,24 @@ export default function Home() {
           },
         }}
       />
+      <footer className="w-full mt-8 py-6 bg-gray-900 text-gray-300 flex flex-col md:flex-row items-center justify-between px-6">
+          <div className="flex items-center space-x-2">
+            <span className="font-semibold text-lg text-blue-400">AI Image Generator</span>
+            <span className="text-xs text-gray-500">© {new Date().getFullYear()}</span>
+          </div>
+          <div className="flex space-x-4 mt-2 md:mt-0 items-center">
+            <a
+              href="https://github.com/JOcular1234/kinplus-text-to-image-ai.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition"
+            >
+              GitHub
+            </a>
+            <span className="text-xs text-gray-500">Made with ❤️ by Kinplus Technologies</span>
+          </div>
+        </footer>
     </div>
+
   );
 }
