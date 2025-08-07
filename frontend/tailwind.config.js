@@ -50,7 +50,8 @@ module.exports = {
         'chatgpt-input': '#40414f',
         'chatgpt-text': '#ececf1',
         'chatgpt-textSecondary': '#acacbe',
-        'chatgpt-accent': '#10a37f',
+        'chatgpt-accent': '#1e40af',
+        // #1e40af
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in',
