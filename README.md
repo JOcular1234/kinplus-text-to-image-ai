@@ -1,5 +1,11 @@
 # AI Image Generator Frontend
 
+![App Screenshot](frontend/images/Screenshot%202025-08-07%20101259.png)
+
+![App Screenshot](frontend/images/debug_flux.png)
+
+
+
 This is the frontend for an AI Image Generator application, built with [Next.js](https://nextjs.org/) and designed to be deployed on [Vercel](https://vercel.com/).
 
 ## Features
