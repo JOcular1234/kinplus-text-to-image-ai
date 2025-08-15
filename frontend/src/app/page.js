@@ -1,92 +1,4 @@
 // // // // frontend/src/app/page.js
-// 'use client';
-// import { useState } from 'react';
-// import { CldImage } from 'next-cloudinary';
-
-// export default function Home() {
-//   const [prompt, setPrompt] = useState('');
-//   const [imageUrl, setImageUrl] = useState('');
-//   const [loading, setLoading] = useState(false);
-//   const [error, setError] = useState('');
-
-//   const handleGenerate = async () => {
-//     if (!prompt) {
-//       setError('Please enter a prompt');
-//       return;
-//     }
-//     setLoading(true);
-//     setError('');
-//     setImageUrl('');
-
-//     try {
-//       const res = await fetch('/api/generate', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({ prompt }),
-//       });
-
-//       const data = await res.json();
-//       if (data.imageUrl) {
-//         setImageUrl(data.imageUrl);
-//       } else {
-//         setError(data.error || 'Failed to generate image');
-//       }
-//     } catch (err) {
-//       console.error('Frontend error:', err);
-//       setError('Something went wrong');
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   return (
-//     <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-r from-blue-100 to-purple-100">
-//       <h1 className="text-3xl font-bold text-gray-800 mb-6">FLUX.1‑dev Image Generator</h1>
-
-//       <div className="w-full max-w-2xl bg-white rounded-lg shadow-lg p-6">
-//         <textarea
-//           value={prompt}
-//           onChange={(e) => setPrompt(e.target.value)}
-//           placeholder="Describe the image you want..."
-//           className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-//           rows="3"
-//         />
-
-//         <button
-//           onClick={handleGenerate}
-//           disabled={loading || !prompt}
-//           className={`w-full p-3 text-white font-semibold rounded-lg mt-4 ${
-//             loading || !prompt ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
-//           }`}
-//         >
-//           {loading ? 'Generating...' : 'Generate Image'}
-//         </button>
-
-//         {error && (
-//           <p className="mt-4 text-red-600 text-sm">{error}</p>
-//         )}
-
-//         {imageUrl && (
-//           <div className="mt-6">
-//             <h3 className="text-lg font-semibold text-gray-700 mb-3">Generated Image:</h3>
-//             <CldImage
-//               src={imageUrl}
-//               width="1024"
-//               height="1024"
-//               alt="Generated Image"
-//               crop="fill"
-//               sizes="100vw"
-//               className="rounded-lg shadow-md w-full"
-//             />
-//           </div>
-//         )}
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
 'use client';
 import { useState, useEffect } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
@@ -186,7 +98,7 @@ export default function Home() {
       {/* Header */}
       <header className="sticky top-0 bg-white/80 dark:bg-chatgpt-panel/90 backdrop-blur-md shadow-sm p-4 flex justify-between items-center z-10 transition-colors duration-300">
         {/* <h1 className="text-2xl font-bold text-gray-800 dark:text-chatgpt-text">KINPLUS-dev Image Generator</h1> */}
-        <h1 className="text-2xl font-bold text-gray-800 dark:text-chatgpt-text"><img src="https://res.cloudinary.com/dl4a6kmzr/image/upload/v1746012081/kinplusBluelogo_yyxikf.png" alt="" /></h1>
+        <h1 className="text-2xl font-bold text-gray-800 dark:text-chatgpt-text">kinvisuals</h1>
         <div className="flex gap-2 items-center">
           <button
             onClick={toggleDarkMode}
@@ -335,22 +247,12 @@ export default function Home() {
           },
         }}
       />
-      <footer className="w-full mt-8 py-6 bg-gray-900 text-gray-300 flex flex-col md:flex-row items-center justify-between px-6">
-          <div className="flex items-center space-x-2">
-            <span className="font-semibold text-lg text-blue-400">AI Image Generator</span>
+      <footer className="w-full mt-8 py-6 bg-gray-900 text-gray-300 flex flex-col md:flex-row items-center justify-between px-6 text-center">
+          <div className="flex items-center text-center space-x-2">
+            <span className="font-semibold text-lg text-blue-400">kinvisuals</span>
             <span className="text-xs text-gray-500">© {new Date().getFullYear()}</span>
           </div>
-          <div className="flex space-x-4 mt-2 md:mt-0 items-center">
-            <a
-              href="https://github.com/JOcular1234/kinplus-text-to-image-ai.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-400 transition"
-            >
-              GitHub
-            </a>
-            <span className="text-xs text-gray-500">Made with ❤️ by Kinplus Technologies</span>
-          </div>
+          
         </footer>
     </div>
 

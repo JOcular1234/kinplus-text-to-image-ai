@@ -1,4 +1,4 @@
-// // // // // frontend/src/app/api/generate/route.
+// frontend/src/app/api/generate/route.
 import { InferenceClient } from "@huggingface/inference";
 import { v2 as cloudinary } from "cloudinary";
 import fs from "fs";
